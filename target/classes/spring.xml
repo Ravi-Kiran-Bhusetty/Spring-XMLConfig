@@ -9,8 +9,10 @@
         <property name="laptop" ref="laptopId"/>
     </bean>
 
-    <bean id="laptopId" class="org.example.Laptop" >
+    <bean id="laptopId" class="org.example.Laptop">
     </bean>
 
+    <bean id="desktopId" class="org.example.Desktop" lazy-init="true">
+    </bean>
 
 </beans>
