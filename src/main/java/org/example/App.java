@@ -16,10 +16,8 @@ public class App
         //Getting bean from IoC container. Below two ways are possible
         // Only a single object will be created because the default scope is Singleton
         Alien alien = context.getBean(Alien.class);
+        System.out.println(alien.getAge());
         alien.code();
-
-        Alien alien2 = context.getBean("alien", Alien.class);
-        alien2.code();
 
     }
 }
