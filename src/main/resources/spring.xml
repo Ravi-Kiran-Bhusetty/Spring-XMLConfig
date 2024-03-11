@@ -4,15 +4,30 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="alien" class="org.example.Alien" >
+    <!-- Setter Injection Start-->
+    <!--<bean id="alien" class="org.example.Alien" >
         <property name="age" value="26"/>
         <property name="laptop" ref="laptopId"/>
+    </bean>-->
+    <!-- Setter Injection End-->
+    <bean id="alien" class="org.example.Alien" autowire="byName">
+        <!--If we don't want to add property for object, we can use autowire
+        byName: Name of the variable in Alien class
+        byType: search by class type (check if 2 classes are implementing. Fix: Primary for one class)-->
+        <property name="age" value="26"/>
+
+        <!--Order is important
+        <constructor-arg value="25"/>
+        <constructor-arg ref="laptopId" />-->
+        <!--<constructor-arg index="1" ref="laptopId" />
+        <constructor-arg index="0" value="25"/>-->
     </bean>
+
 
     <bean id="laptopId" class="org.example.Laptop">
     </bean>
 
-    <bean id="desktopId" class="org.example.Desktop" lazy-init="true">
+    <bean id="comp" class="org.example.Desktop" lazy-init="true">
     </bean>
 
 </beans>
