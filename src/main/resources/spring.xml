@@ -15,7 +15,10 @@
         byName: Name of the variable in Alien class
         byType: search by class type (check if 2 classes are implementing. Fix: Primary for one class)-->
         <property name="age" value="26"/>
-        <property name="comp" ref="desktopId"/>
+        <property name="comp" >
+            <bean class="org.example.Desktop">
+            </bean>
+        </property>
         <!--Order is important
         <constructor-arg value="25"/>
         <constructor-arg ref="laptopId" />-->
@@ -24,10 +27,10 @@
     </bean>
 
 
-    <bean id="laptopId" class="org.example.Laptop" primary="true">
+    <!--<bean id="laptopId" class="org.example.Laptop" primary="true">
     </bean>
 
     <bean id="desktopId" class="org.example.Desktop" lazy-init="true">
-    </bean>
+    </bean>-->
 
 </beans>
