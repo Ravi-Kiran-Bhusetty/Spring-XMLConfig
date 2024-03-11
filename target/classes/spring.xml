@@ -15,7 +15,7 @@
         byName: Name of the variable in Alien class
         byType: search by class type (check if 2 classes are implementing. Fix: Primary for one class)-->
         <property name="age" value="26"/>
-
+        <property name="comp" ref="desktopId"/>
         <!--Order is important
         <constructor-arg value="25"/>
         <constructor-arg ref="laptopId" />-->
