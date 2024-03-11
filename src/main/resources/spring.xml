@@ -10,7 +10,7 @@
         <property name="laptop" ref="laptopId"/>
     </bean>-->
     <!-- Setter Injection End-->
-    <bean id="alien" class="org.example.Alien" autowire="byName">
+    <bean id="alien" class="org.example.Alien" autowire="byType">
         <!--If we don't want to add property for object, we can use autowire
         byName: Name of the variable in Alien class
         byType: search by class type (check if 2 classes are implementing. Fix: Primary for one class)-->
@@ -27,7 +27,7 @@
     <bean id="laptopId" class="org.example.Laptop">
     </bean>
 
-    <bean id="comp" class="org.example.Desktop" lazy-init="true">
-    </bean>
+    <!--<bean id="comp" class="org.example.Desktop" lazy-init="true">
+    </bean>-->
 
 </beans>
